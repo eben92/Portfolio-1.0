@@ -3,7 +3,7 @@ import Button from "../button";
 
 const About = () => {
   return (
-    <div className='flex flex-col border gap-7 w-full'>
+    <div className='flex flex-col border gap-7  w-full'>
       {/* <div className='flex relative'>
         {/* <h1 className="font-['Source_Code_Pro'] text-[96px] leading-none">
           Hi
@@ -17,7 +17,7 @@ const About = () => {
         /> 
       </div> */}
 
-      <div className='flex justify-end w-full gap-4'>
+      <div className='flex sticky top-[4rem] z-[5px]   justify-end w-full gap-4'>
         <Button name='Projects' />
         <Button name='Resume' />
       </div>
