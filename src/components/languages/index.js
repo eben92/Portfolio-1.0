@@ -9,6 +9,37 @@ import TAILWINDCSS from "../../assets/tailwindcss.svg";
 import GIT from "../../assets/git.svg";
 
 const Languages = () => {
+  const addSlider = () => {
+    const slider = document.querySelector(".items");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider?.addEventListener("mousedown", (e) => {
+      isDown = true;
+      // slider.classList.add("cursor-grabbing");
+      slider.classList.replace("cursor-grab", "cursor-grabbing");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider?.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.replace("cursor-grabbing", "cursor-grab");
+    });
+    slider?.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.replace("cursor-grabbing", "cursor-grab");
+    });
+    slider?.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+      console.log(walk);
+    });
+  };
+
   const languages = [
     {
       name: "HTML",
@@ -59,7 +90,10 @@ const Languages = () => {
 
   return (
     <div className=' whitespace-nowrap'>
-      <ul className='flex gap-2   border  overflow-auto'>
+      <ul
+        onClick={addSlider}
+        className='flex gap-2 items  border cursor-grab overflow-auto'
+      >
         {languages.map((language, index) => (
           <li
             key={index}
@@ -69,7 +103,7 @@ const Languages = () => {
               <img
                 src={language.icon}
                 alt=''
-                className='cursor-pointer  hover:shadow  rounded-full transition'
+                className='  hover:shadow  rounded-full transition'
               />
             </div>
 

@@ -29,9 +29,9 @@ const About = () => {
           </h4>
           <span className='font-[400] text-base'>Web Developer</span>
         </div>
-        <developer className="font-['Source_Code_Pro'] text-xs text-[#A3A3A3]">
+        <p className="font-['Source_Code_Pro'] text-xs text-[#A3A3A3]">
           Science, Technology & Engineering
-        </developer>
+        </p>
         <div>
           <p className='font-[400] text-base'>Community Taught Developer</p>
           <p className=' font-[400] flex items-center gap-2 text-base'>
