@@ -1,7 +1,7 @@
 // import { Navigate, useNavigate } from "react-router-dom";
 import Button from "../button";
 
-const About = () => {
+const About = ({ setActiveTab }) => {
   // const { navigate } = useNavigate();
 
   return (
@@ -21,7 +21,7 @@ const About = () => {
 
       <div className='flex sticky top-[4rem] z-[5px]   justify-end w-full gap-4'>
         <a href='#projects'>
-          <Button name='Projects' />
+          <Button name='Projects' onClick={() => setActiveTab("Projects")} />
         </a>
         <Button name='Resume' />
       </div>

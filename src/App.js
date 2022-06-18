@@ -23,7 +23,7 @@ function App() {
       <div className='flex flex-col gap-10 '>
         <div className='flex justify-center gap-28 mt-16 border px-[200px]'>
           <Profile />
-          <About />
+          <About setActiveTab={setActiveTab} />
         </div>
 
         {/* languages */}
