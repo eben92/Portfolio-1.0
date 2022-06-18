@@ -1,7 +1,9 @@
-import Hi from "../../assets/hi.svg";
+// import { Navigate, useNavigate } from "react-router-dom";
 import Button from "../button";
 
 const About = () => {
+  // const { navigate } = useNavigate();
+
   return (
     <div className='flex flex-col border gap-7  w-full'>
       {/* <div className='flex relative'>
@@ -18,7 +20,9 @@ const About = () => {
       </div> */}
 
       <div className='flex sticky top-[4rem] z-[5px]   justify-end w-full gap-4'>
-        <Button name='Projects' />
+        <a href='#projects'>
+          <Button name='Projects' />
+        </a>
         <Button name='Resume' />
       </div>
 
