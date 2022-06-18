@@ -1,5 +1,15 @@
+import Me from "../../assets/eben1.svg";
+
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <div className='w-full flex items-center border justify-end'>
+      <img
+        src={Me}
+        alt=''
+        className='hover:shadow-lg rounded-full transition cursor-pointer '
+      />
+    </div>
+  );
 };
 
 export default Profile;
