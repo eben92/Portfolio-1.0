@@ -1,8 +1,20 @@
-import { About, Header, Languages, Profile } from "./components";
-import logo from "./logo.svg";
+import { useState } from "react";
+import {
+  About,
+  Header,
+  Languages,
+  Profile,
+  Projects,
+  Tabs,
+} from "./components";
+
 // import "./App.css";
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Projects");
+
+  const tabs = ["Projects", "More"];
+
   return (
     <div className='App'>
       <>
@@ -17,6 +29,13 @@ function App() {
         {/* languages */}
         <div className='border whitespace-nowrap md:px-[200px]'>
           <Languages />
+        </div>
+
+        {/* tabs ::: projects
+         */}
+        <div>
+          <Tabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
+          <div className=''>{activeTab === "Projects" && <Projects />}</div>
         </div>
       </div>
     </div>
