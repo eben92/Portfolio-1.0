@@ -6,3 +6,4 @@ export { default as Tabs } from "./tabs";
 export { default as More } from "./more";
 export { default as Projects } from "./projects";
 export { default as Button } from "./button";
+export { default as Footer } from "./footer";

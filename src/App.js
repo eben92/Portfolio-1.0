@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   About,
+  Footer,
   Header,
   Languages,
   Profile,
@@ -38,6 +39,8 @@ function App() {
           <div className=''>{activeTab === "Projects" && <Projects />}</div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
