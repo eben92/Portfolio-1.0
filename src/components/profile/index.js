@@ -2,7 +2,7 @@ import Me from "../../assets/eben1.svg";
 import useScreenSize from "../useScreenSize";
 import Button from "../button";
 
-const Profile = ({ setActiveTab }) => {
+const Profile = ({ setActiveTab, setShowModal }) => {
   const dimensions = useScreenSize();
 
   return (
@@ -18,8 +18,8 @@ const Profile = ({ setActiveTab }) => {
           <div className='flex top-[4rem] z-[5px] flex-col  md:justify-end w-full gap-4'>
             {/* <a href='#projects' className='w-full'> */}
             <Button
-              name='Projects'
-              onClick={() => setActiveTab("Projects")}
+              name='Text Me'
+              onClick={() => setShowModal(true)}
               className='w-full'
             />
             {/* </a> */}

@@ -8,10 +8,12 @@ import {
   Projects,
   Tabs,
   Cup,
+  Modal,
 } from "./components";
 
 function App() {
   const [activeTab, setActiveTab] = useState("Projects");
+  const [showModal, setShowModal] = useState(false);
 
   const tabs = ["Projects", "More"];
 
@@ -24,10 +26,14 @@ function App() {
       {/* <div className=''>
         <Cup />
       </div> */}
+
+      <>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+      </>
       <div className='flex flex-col gap-10 '>
         <div className='flex flex-col md:flex-row md:justify-center gap-5 px-5  md:gap-28 mt-16 lg:px-[200px]'>
-          <Profile />
-          <About setActiveTab={setActiveTab} />
+          <Profile setShowModal={setShowModal} />
+          <About setActiveTab={setActiveTab} setShowModal={setShowModal} />
         </div>
 
         {/* languages */}

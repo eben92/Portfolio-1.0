@@ -4,7 +4,7 @@ import Button from "../button";
 import useScreenSize from "../useScreenSize";
 import { MdOutlineCoffeeMaker } from "react-icons/md";
 
-const About = ({ setActiveTab }) => {
+const About = ({ setActiveTab, setShowModal }) => {
   // const { navigate } = useNavigate();
   const dimensions = useScreenSize();
 
@@ -35,10 +35,11 @@ const About = ({ setActiveTab }) => {
           </button> */}
           {/* <a href='#projects'> */}
           <Button
-            name='Projects'
+            name='Text Me'
             onClick={() => {
-              window.location.href = "/#projects";
-              setActiveTab("Projects");
+              // window.location.href = "/#projects";
+              // setActiveTab("Projects");
+              setShowModal(true);
             }}
           />
           {/* </a> */}
