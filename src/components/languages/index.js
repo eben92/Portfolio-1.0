@@ -91,14 +91,14 @@ const Languages = () => {
     <div className=' whitespace-nowrap'>
       <ul
         onClick={addSlider}
-        className='flex gap-2 items  cursor-grab overflow-auto'
+        className='flex md:gap-2 items  cursor-grab overflow-auto'
       >
         {languages.map((language, index) => (
           <li
             key={index}
             className='flex flex-col w-full    items-center gap-2'
           >
-            <div className='w-[100px] h-[60px] flex items-center justify-center'>
+            <div className='md:w-[100px] w-[80px] h-[60px] flex items-center justify-center'>
               <img
                 src={language.icon}
                 alt=''

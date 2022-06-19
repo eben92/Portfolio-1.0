@@ -7,3 +7,4 @@ export { default as More } from "./more";
 export { default as Projects } from "./projects";
 export { default as Button } from "./button";
 export { default as Footer } from "./footer";
+export { default as useScreenSize } from "./useScreenSize";

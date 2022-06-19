@@ -22,13 +22,13 @@ function App() {
         <Header />
       </>
       <div className='flex flex-col gap-10 '>
-        <div className='flex justify-center gap-28 mt-16 px-[200px]'>
+        <div className='flex flex-col md:flex-row md:justify-center gap-5 px-5  md:gap-28 mt-16 lg:px-[200px]'>
           <Profile />
           <About setActiveTab={setActiveTab} />
         </div>
 
         {/* languages */}
-        <div className=' whitespace-nowrap md:px-[200px]'>
+        <div className=' whitespace-nowrap lg:px-[200px]'>
           <Languages />
         </div>
 

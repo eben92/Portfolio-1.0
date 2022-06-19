@@ -1,8 +1,15 @@
 // import { Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Button from "../button";
+import useScreenSize from "../useScreenSize";
 
 const About = ({ setActiveTab }) => {
   // const { navigate } = useNavigate();
+  const dimensions = useScreenSize();
+
+  useEffect(() => {
+    console.log(dimensions.width);
+  }, [dimensions]);
 
   return (
     <div className='flex flex-col gap-7  w-full'>
@@ -19,13 +26,14 @@ const About = ({ setActiveTab }) => {
         /> 
       </div> */}
 
-      <div className='flex sticky top-[4rem] z-[5px]   justify-end w-full gap-4'>
-        <a href='#projects'>
-          <Button name='Projects' onClick={() => setActiveTab("Projects")} />
-        </a>
-        <Button name='Resume' />
-      </div>
-
+      {dimensions.width > 768 && (
+        <div className='flex sticky top-[4rem] z-[5px]   md:justify-end w-full gap-4'>
+          <a href='#projects'>
+            <Button name='Projects' onClick={() => setActiveTab("Projects")} />
+          </a>
+          <Button name='Resume' />
+        </div>
+      )}
       <div>
         <div className='flex gap-4 items-center'>
           <h4 className='font-[600] after:border-r-2 after:ml-4 text-xl'>
