@@ -24,30 +24,45 @@ const Header = () => {
 
         <div id='menu' className='hidden'>
           <div className='absolute grid grid-cols-2 gap-2 right-[0px] w-[150px] h-[100px] z-10 bg-white rounded border border-[#cacaca] shadow-xl top-[40px] py-2 px-3'>
-            <div className='flex rounded justify-center items-center border'>
+            <a
+              href='//instagram.com/1rutmann'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex rounded justify-center items-center border'
+            >
               <img
                 src='https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg'
                 alt='instagram'
                 className='w-[24px] h-[24px] '
               />
-            </div>
-            <div className='flex rounded justify-center items-center border'>
+            </a>
+            <a
+              href='//linkedin.com/in/ebenezer-frimpong-310390222'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex rounded justify-center items-center border'
+            >
               <img
                 src={Linkdln}
                 alt='instagram'
                 className='w-[24px] h-[24px] '
               />
-            </div>
+            </a>
             <div className='flex rounded justify-center items-center border'>
               <img src={Eben} alt='instagram' className='w-[24px] h-[24px] ' />
             </div>
-            <div className='flex rounded justify-center items-center border'>
+            <a
+              href='//github.com/rhutmann'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex rounded justify-center items-center border'
+            >
               <img
                 src={Github}
                 alt='instagram'
                 className='w-[24px] h-[24px] '
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

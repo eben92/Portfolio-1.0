@@ -10,15 +10,13 @@ import {
   Cup,
 } from "./components";
 
-// import "./App.css";
-
 function App() {
   const [activeTab, setActiveTab] = useState("Projects");
 
   const tabs = ["Projects", "More"];
 
   return (
-    <div className='App'>
+    <div>
       <>
         <Header />
       </>
