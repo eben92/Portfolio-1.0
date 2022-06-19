@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Button from "../button";
 import useScreenSize from "../useScreenSize";
+import { MdOutlineCoffeeMaker } from "react-icons/md";
 
 const About = ({ setActiveTab }) => {
   // const { navigate } = useNavigate();
@@ -28,9 +29,19 @@ const About = ({ setActiveTab }) => {
 
       {dimensions.width > 768 && (
         <div className='flex sticky top-[4rem] z-[5px]   md:justify-end w-full gap-4'>
-          <a href='#projects'>
-            <Button name='Projects' onClick={() => setActiveTab("Projects")} />
-          </a>
+          {/* <button className='flex flex-col-reverse items-center border border-[#cacaca] rounded py-1 px-2'>
+            <MdOutlineCoffeeMaker className='text-red' />
+            <p className='text-[10px]'>2.4k cheers</p>
+          </button> */}
+          {/* <a href='#projects'> */}
+          <Button
+            name='Projects'
+            onClick={() => {
+              window.location.href = "/#projects";
+              setActiveTab("Projects");
+            }}
+          />
+          {/* </a> */}
           <Button name='Resume' />
         </div>
       )}

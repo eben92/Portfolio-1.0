@@ -7,6 +7,7 @@ import {
   Profile,
   Projects,
   Tabs,
+  Cup,
 } from "./components";
 
 // import "./App.css";
@@ -21,6 +22,10 @@ function App() {
       <>
         <Header />
       </>
+
+      {/* <div className=''>
+        <Cup />
+      </div> */}
       <div className='flex flex-col gap-10 '>
         <div className='flex flex-col md:flex-row md:justify-center gap-5 px-5  md:gap-28 mt-16 lg:px-[200px]'>
           <Profile />
