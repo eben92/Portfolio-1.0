@@ -91,7 +91,7 @@ const Languages = () => {
     <div className=' whitespace-nowrap'>
       <ul
         onClick={addSlider}
-        className='flex gap-2 items  border cursor-grab overflow-auto'
+        className='flex gap-2 items  cursor-grab overflow-auto'
       >
         {languages.map((language, index) => (
           <li
@@ -106,7 +106,7 @@ const Languages = () => {
               />
             </div>
 
-            <p className='uppercase font-[500]'>{language.name}</p>
+            <p className='uppercase text-sm font-[500]'>{language.name}</p>
           </li>
         ))}
       </ul>

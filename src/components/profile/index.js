@@ -2,7 +2,7 @@ import Me from "../../assets/eben1.svg";
 
 const Profile = () => {
   return (
-    <div className='w-full flex items-center border justify-end'>
+    <div className='w-full flex items-center justify-end'>
       <img
         src={Me}
         alt=''

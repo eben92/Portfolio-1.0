@@ -5,7 +5,7 @@ const About = ({ setActiveTab }) => {
   // const { navigate } = useNavigate();
 
   return (
-    <div className='flex flex-col border gap-7  w-full'>
+    <div className='flex flex-col gap-7  w-full'>
       {/* <div className='flex relative'>
         {/* <h1 className="font-['Source_Code_Pro'] text-[96px] leading-none">
           Hi
