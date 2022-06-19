@@ -34,7 +34,7 @@ function App() {
 
         {/* tabs ::: projects
          */}
-        <div>
+        <div className='mb-10'>
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
           <div className=''>{activeTab === "Projects" && <Projects />}</div>
         </div>
