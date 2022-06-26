@@ -18,7 +18,7 @@ const Profile = ({ setActiveTab, setShowModal }) => {
           <div className='flex top-[4rem] z-[5px] flex-col  md:justify-end w-full gap-4'>
             {/* <a href='#projects' className='w-full'> */}
             <Button
-              name='Text Me'
+              name='Contact Me'
               onClick={() => setShowModal(true)}
               className='w-full'
             />
