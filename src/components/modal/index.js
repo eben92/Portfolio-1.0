@@ -1,19 +1,6 @@
 import { useState, useEffect } from "react";
 import Me from "../../assets/eben1.svg";
-const Modal = ({ showModal, setShowModal }) => {
-  const [inputField, setInputField] = useState({
-    email: "",
-    message: "",
-  });
-
-  useEffect(() => {
-    console.log(inputField);
-  }, [inputField]);
-
-  const handleChange = (e) => {
-    setInputField({ ...inputField, [e.target.name]: e.target.value });
-  };
-
+const Modal = ({ showModal, setShowModal, children }) => {
   return (
     <div>
       {showModal && (
@@ -36,38 +23,7 @@ const Modal = ({ showModal, setShowModal }) => {
                   className='w-[60px] h-[60px] rounded-full bg-white'
                 />
               </div>
-
-              <form className='w-full'>
-                <div className='mt-8 mb-4 flex relative flex-col gap-2'>
-                  <p className='font-[500] text-center '>Tell me something.</p>
-
-                  <div className='w-full px-5'>
-                    <input
-                      type='email'
-                      name='email'
-                      onChange={handleChange}
-                      required
-                      placeholder='Email'
-                      value={inputField.email}
-                      className='borderborder-[#cacaca] focus:border-none outline-none  md:text-sm mb-2 bg-[#e6e6e6] w-full px-3 py-1 rounded'
-                    />
-                    <textarea
-                      name='message'
-                      type='text'
-                      placeholder='Message'
-                      className='border bg-[#e6e6e6] focus:border-none outline-none  md:text-sm  w-full px-3 py-1 rounded'
-                      required
-                      onChange={handleChange}
-                      value={inputField.message}
-                    />
-                  </div>
-                </div>
-                {inputField.message && inputField.email && (
-                  <button className='bg-blue-600 hover:bg-blue-700 transition rounded-b-2xl py-3  bottom-0 font-[600] text-white w-full'>
-                    SEND
-                  </button>
-                )}
-              </form>
+              {children}
             </div>
           </div>
         </div>

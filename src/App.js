@@ -14,20 +14,14 @@ import {
 import { Home } from "./pages";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("Projects");
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <div>
       <>
         <Header />
       </>
       <BrowserRouter>
-        <>
-          <Modal showModal={showModal} setShowModal={setShowModal} />
-        </>
         <Routes>
-          <Route path='/' element={<Home setShowModal={setShowModal} />} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </BrowserRouter>
 
