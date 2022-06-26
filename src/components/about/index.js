@@ -35,7 +35,7 @@ const About = ({ setActiveTab, setShowModal }) => {
           </button> */}
           {/* <a href='#projects'> */}
           <Button
-            name='Text Me'
+            name='Contact Me'
             onClick={() => {
               // window.location.href = "/#projects";
               // setActiveTab("Projects");
