@@ -41,16 +41,6 @@ const Languages = () => {
 
   const languages = [
     {
-      name: "HTML",
-      level: "Expert",
-      icon: HTML,
-    },
-    {
-      name: "CSS",
-      level: "Expert",
-      icon: CSS,
-    },
-    {
       name: "JavaScript",
       level: "Expert",
       icon: JAVASCRIPT,
@@ -64,6 +54,16 @@ const Languages = () => {
       name: "NextJS",
       level: "Expert",
       icon: NEXTJS,
+    },
+    {
+      name: "HTML",
+      level: "Expert",
+      icon: HTML,
+    },
+    {
+      name: "CSS",
+      level: "Expert",
+      icon: CSS,
     },
     {
       name: "REDUX",
